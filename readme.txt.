@@ -1,0 +1,68 @@
+###################################################################################
+##  YOU MIGHT HAVE TO SET THE APPROPRIATE PERMISSIONS FOR THE RESPECTIVE FOLDERS ##
+###################################################################################
+
+
+
+
+the text files are designed as follows:
+
+students:
+    studnr, name, surname, birthday.
+
+    * the user may overwrite / append to these data, as well as append to stud_course, but nothing else.
+    there are no problems with overwriting students.csv and adding a new line to stud_course at the same time,
+    because the latter only shares the "studnr" key with students.csv.
+
+
+courses:
+    code, semester, name, year, credits, 
+
+    * i'm assuming that the input file cannot write new fields to stud_course unnless
+    All the fields relevant to the course don't match/exist.
+
+
+instructor: 
+ inst_id, name.
+
+
+stud_course:
+    studnr, c.code, grade and c.semester
+    * this is a relational file, coupling a taken course with the respective student
+
+
+inst_course:
+    inst_id, c.code, 
+    * this is a relational file, coupling a given class with the respective instructor.
+    i'm assuming that the input file should not be able to write to stud_course unless
+    the relevant fields exist in this one.
+
+
+              .,
+    .      _,'f----.._
+    |\ ,-'"/  |     ,'
+    |,_  ,--.      /                ######################
+    /,-. ,'`.     (_                ##  DERIVED VALUES: ##
+    f  o|  o|__     "`-.            ######################
+    ,-._.,--'_ `.   _.,-`
+    `"' ___.,'` j,-'
+      `-.__.,--'
+
+
+STUDENTS.PHP
+- num of courses completed / failed:
+
+- GPA
+
+- Status
+
+
+COURSES.PHP
+- num of students registered
+
+- num students passed
+
+- avg. grade 
+
+
+
